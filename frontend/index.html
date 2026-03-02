@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <title>Santaminer</title>
+  <style>
+ table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+/*https://www.w3schools.com/howto/howto_css_loader.asp*/
+    .loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+  <h1>Santaminer</h1>
+
+  <section>
+    <h2><img src="assets/santa.gif" style="width:48px;height:48px;">Mining request<img src="assets/santa.gif" style="width:48px;height:48px;"></h2>
+    <form id="minerForm">
+      <input type="text" id="secretkey" placeholder="Secret key" required />
+      <input type="number" step="1" id="requiredZeros" placeholder="5" required />
+      <button class="full" type="submit">Mine</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Mining result</h2>
+    <table id="resultTable">
+      <thead><tr><th>Key</th><th>MD5Sum</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Request history</h2>
+        <table id="historyTable">
+      <thead><tr><th>Secret key</th><th>Requested leading zeros</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <script src="./app.js"></script>
+</body>
+</html>
