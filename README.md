@@ -23,10 +23,3 @@ Now you can enter your secret key and the number of leading zeros required, clic
 ## Disclaimer
 
 I am not a go/backend programmer. So this code is less than ideal.
-
----
-(just there for boot.dev points)
-Motivation
-Quick Start
-Usage
-Contributing
